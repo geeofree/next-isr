@@ -27,7 +27,7 @@ export default function Home(props: HomeProps) {
       <main className="grid grid-cols-3 mb-4 gap-4">
         <h1 className="col-span-3 text-2xl font-bold">People</h1>
         {people?.map(person => (
-          <article key={person._uid} className="p-2">
+          <article key={person._uid} className="p-4 border border-gray-300 rounded">
             <p className="text-xl">{person.first_name} {person.last_name}</p>
             <p>Email: {person.email}</p>
             <p>Birthday: {person.date_of_birth}</p>
@@ -37,7 +37,7 @@ export default function Home(props: HomeProps) {
       <section className="grid grid-cols-3 gap-4">
         <h1 className="col-span-3 text-2xl font-bold">Products</h1>
         {products?.map(product => (
-          <article key={product._uid} className="p-2">
+          <article key={product._uid} className="p-4 border border-gray-300 rounded">
             <p className="text-xl">{product.name}</p>
             <p>Stock: {product.stock}</p>
             <p>Price: {product.price}</p>
